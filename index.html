@@ -24,40 +24,40 @@
   body {
     background: var(--bg);
     color: var(--text);
-    font: 16px/1.75 -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', system-ui, sans-serif;
+    font: 18px/1.9 -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', system-ui, sans-serif;
   }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
+  .wrap { max-width: 740px; margin: 0 auto; padding: 36px 22px 72px; }
 
-  header.top { padding: 8px 0 24px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  header.top { padding: 8px 0 26px; border-bottom: 1px solid var(--border); margin-bottom: 36px; }
   header.top h1 {
-    font-size: 22px;
+    font-size: 26px;
     line-height: 1.5;
     color: var(--brand);
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     font-weight: 800;
   }
-  header.top .sub { font-size: 14px; color: var(--muted); margin-bottom: 12px; }
-  header.top .meta { font-size: 13px; color: var(--muted); }
-  header.top .meta span + span { margin-left: 14px; }
+  header.top .sub { font-size: 16px; color: var(--muted); margin-bottom: 14px; }
+  header.top .meta { font-size: 15px; color: var(--muted); }
+  header.top .meta span + span { margin-left: 16px; }
 
-  section { margin-bottom: 40px; }
+  section { margin-bottom: 44px; }
   h2 {
-    font-size: 18px;
+    font-size: 22px;
     color: var(--brand);
-    border-left: 4px solid var(--accent);
-    padding-left: 12px;
-    margin-bottom: 16px;
-    line-height: 1.4;
+    border-left: 5px solid var(--accent);
+    padding-left: 14px;
+    margin-bottom: 18px;
+    line-height: 1.45;
   }
   h3 {
-    font-size: 15px;
+    font-size: 18px;
     color: var(--text);
-    margin: 20px 0 10px;
+    margin: 24px 0 12px;
     font-weight: 700;
   }
-  p { margin-bottom: 12px; }
-  ul, ol { padding-left: 22px; margin-bottom: 12px; }
-  li { margin-bottom: 6px; }
+  p { margin-bottom: 14px; }
+  ul, ol { padding-left: 24px; margin-bottom: 14px; }
+  li { margin-bottom: 8px; }
 
   a { color: var(--accent); }
   a:hover { text-decoration: underline; }
@@ -65,38 +65,38 @@
   .note {
     background: var(--soft);
     border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 14px 16px;
-    margin: 12px 0;
-    font-size: 14px;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin: 14px 0;
+    font-size: 17px;
   }
   .note b { color: var(--brand); }
 
   .callout {
     background: var(--danger-bg);
     border: 1px solid var(--danger-border);
-    border-left: 4px solid var(--danger);
-    border-radius: 6px;
-    padding: 12px 14px;
-    margin: 14px 0;
-    font-size: 14px;
+    border-left: 5px solid var(--danger);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 16px 0;
+    font-size: 17px;
   }
   .callout .mark { color: var(--danger); font-weight: 800; margin-right: 4px; }
 
   .table-wrap {
     overflow-x: auto;
-    margin: 14px -4px;
+    margin: 16px -4px;
     padding: 0 4px;
     -webkit-overflow-scrolling: touch;
   }
   table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 13px;
+    font-size: 15px;
     min-width: 560px;
   }
   th, td {
-    padding: 8px 10px;
+    padding: 10px 12px;
     text-align: left;
     border-bottom: 1px solid var(--border);
     vertical-align: top;
@@ -140,36 +140,39 @@
     font-weight: 700;
     font-size: 14px;
   }
-  .options .title { font-weight: 700; display: block; margin-bottom: 4px; color: var(--brand); }
-  .options .desc { font-size: 14px; color: var(--text); }
+  .options .title { font-weight: 700; display: block; margin-bottom: 6px; color: var(--brand); font-size: 18px; }
+  .options .desc { font-size: 16px; color: var(--text); line-height: 1.75; }
 
-  .refs { font-size: 13px; }
-  .refs h3 { font-size: 14px; margin-top: 16px; }
-  .refs ul { padding-left: 20px; }
-  .refs li { margin-bottom: 4px; word-break: break-word; }
+  .refs { font-size: 16px; }
+  .refs h3 { font-size: 17px; margin-top: 20px; }
+  .refs ul { padding-left: 22px; }
+  .refs li { margin-bottom: 6px; word-break: break-word; }
 
   footer.bottom {
-    margin-top: 48px;
-    padding-top: 20px;
+    margin-top: 52px;
+    padding-top: 22px;
     border-top: 1px solid var(--border);
-    font-size: 13px;
+    font-size: 15px;
     color: var(--muted);
   }
   footer.bottom .disclaimer {
     background: var(--soft);
-    border-radius: 6px;
-    padding: 12px 14px;
-    margin-bottom: 14px;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 16px;
     color: var(--text);
-    font-size: 13px;
+    font-size: 16px;
+    line-height: 1.8;
   }
-  footer.bottom p { margin-bottom: 6px; }
+  footer.bottom p { margin-bottom: 8px; }
 
   @media (max-width: 520px) {
-    .wrap { padding: 20px 16px 48px; }
-    header.top h1 { font-size: 19px; }
-    h2 { font-size: 16px; }
-    body { font-size: 15px; }
+    .wrap { padding: 22px 16px 52px; }
+    header.top h1 { font-size: 22px; }
+    h2 { font-size: 20px; }
+    h3 { font-size: 17px; }
+    body { font-size: 17px; }
+    .options .title { font-size: 17px; }
   }
 </style>
 </head>
@@ -177,33 +180,43 @@
 <div class="wrap">
 
   <header class="top">
-    <h1>7月以降の新品玩具・フィギュア販売をどうするか — CPSC新規制の考察</h1>
-    <p class="sub">2026年7月8日 CPSC新規制を前にしたリサーチと考察</p>
+    <h1>7月から新品のおもちゃや服をアメリカで売るには — 新しいルールをわかりやすく</h1>
+    <p class="sub">2026年7月からアメリカで変わるルール（CPSC新規制）を調べて、どうしたらいいか考えてみました</p>
     <p class="meta"><span>公開日: 2026年4月8日</span><span>作成: naokijodan</span></p>
   </header>
 
   <!-- Section 1 -->
   <section>
-    <h2>1. 背景 — 何が起きるのか</h2>
-    <p>2026年7月8日、米国の消費者製品安全委員会（CPSC）が、製品安全書類の電子申告（eFiling）を義務化します。米国に輸入される多くの消費財について、通関時に証明書情報を電子データで提出することが求められます。</p>
-    <h3>対象となる書類</h3>
+    <h2>1. どういうこと？ — ルールが変わる話</h2>
+    <p>2026年7月8日から、日本からアメリカにモノを送るときのルールが変わります。</p>
+    <p>アメリカには「CPSC（シーピーエスシー）」という、危険な商品から消費者を守るための役所があります。この役所が「アメリカに商品を送る時は、前もって『これは安全ですよ』という書類を出してね」と決めました。</p>
+    <p>対象になるのは、主に次の3つです。</p>
     <ul>
-      <li><b>CPC（Children's Product Certificate）</b>: 12歳以下向けの子ども製品。第三者試験が必須。</li>
-      <li><b>GCC（General Certificate of Conformity）</b>: 一般消費財向け。自己認証可（多くのアパレルが該当）。</li>
-      <li><b>Disclaimer</b>: 免除品・中古品などを申告するための区分。</li>
+      <li><b>子ども向けの商品</b>（12歳以下が使うもの。おもちゃ、子ども服など） → <b>CPC</b> という書類が必要</li>
+      <li><b>大人向けの服</b>（Tシャツ、ジーンズなど） → <b>GCC</b> という書類が必要</li>
+      <li><b>危険な可能性のある一般商品</b>（自転車、ヘルメット、ボタン電池を使う商品など） → <b>GCC</b> という書類が必要</li>
     </ul>
+    <div class="note">
+      <b>CPC と GCC の違い:</b> CPCは厳しい書類で、アメリカが認めた検査所で実際に検査した結果が必要です。GCCはゆるい書類で、自分で「安全ですよ」と宣言すればOKなケースが多いです。
+    </div>
     <div class="callout">
-      <span class="mark">⚠</span>書類がない・根拠が示せない荷物は、通関で保留されたり、米国販売権限の停止やアカウント制限の対象となるおそれがあります。低額発送（de minimis）であっても対象です。
+      <span class="mark">⚠</span>書類がない荷物は、アメリカの税関で止められたり、返送されたり、最悪はeBayのアカウントが止められてしまうかもしれません。安い商品でも同じです。
     </div>
   </section>
 
   <!-- Section 2 -->
   <section>
-    <h2>2. 最初に考えた案</h2>
-    <p>新品の玩具（シルバニアファミリー等）を米国で売るにあたり、「大人向けコレクターアイテム扱い」にするのは客観的に見てグレーであり、制度の趣旨からも無理があると感じました。</p>
-    <p>そこで次に検討したのが、「自分でCPC書類を作成できないか」という方向性です。<a href="./legacy.html" target="_blank" rel="noopener noreferrer">旧提案書（2026年3月29日版）</a>では、eBay側で対応できる範囲として Item Specifics の Age Level 変更や EAGLE の参考ID設定を中心に検討していました。</p>
+    <h2>2. 最初に考えたこと</h2>
+    <p>新品のシルバニアファミリーやトミカなどを、アメリカに売りたいとします。でも、これって「子ども向けのおもちゃ」ですよね。ということは、上のルールだと CPC という書類が必要になってしまいます。</p>
+    <p>そこで最初に、こう考えました。</p>
+    <ul>
+      <li>「これは大人のコレクターグッズとして売ります」と言えば、子ども向けじゃないから規制を逃れられるのでは？</li>
+      <li>→ でも、それはちょっとズルい気がします。誰が見てもシルバニアは子どものおもちゃです。</li>
+      <li>じゃあ、書類（CPC）を自分で作れないかな？</li>
+    </ul>
+    <p>これを詳しく調べてみました。</p>
     <div class="note">
-      旧提案書（legacy.html）は eBay システム上の対応策に焦点を当てていましたが、これは「書類そのものをどうするか」には答えていませんでした。本資料はその続きの考察です。
+      <a href="./legacy.html" target="_blank" rel="noopener noreferrer">以前の提案書（2026年3月29日版）</a>では、eBayの出品ページの「対象年齢」を変えるなどの対応策を検討していました。今回の資料は、そのあとに「そもそも書類をどうするか」を調べた考察です。
     </div>
   </section>
 
@@ -211,128 +224,128 @@
   <section>
     <h2>3. 調べてわかったこと</h2>
 
-    <h3>3-1. 玩具・フィギュア編</h3>
+    <h3>3-1. おもちゃ・フィギュアのこと</h3>
+    <p><b>「書類を自分で作る」は無理でした。</b></p>
     <ul>
-      <li>CPC書類自体は自作（ドラフト作成）可能ですが、その根拠となる試験結果は <b>CPSC認定の第三者試験所</b> のものでなければなりません（16 CFR Part 1107）。公開情報やメーカーのウェブ情報を根拠にすることはできません。</li>
-      <li>玩具には複数の規則が同時に適用されます。ASTM F963（物理的・機械的特性、可燃性）、16 CFR 1303（鉛塗料）、16 CFR 1307（フタル酸エステル）、総鉛、小部品、磁石などです。</li>
-      <li>1SKUあたりの試験費用の相場は、概ね <b>500〜1,500 USD（約7万〜22万円）</b>。材料数や色数により変動します。</li>
-      <li>Small Batch Manufacturer（小規模製造業者）免除を受けても、鉛や化学試験は免除されません。また、制度は「製造者」向けであり、小売仕入れの転売者には適用されない可能性が高いと考えられます。</li>
-      <li>シルバニアファミリーやトミカなどは、メーカーの主張・マーケティング・消費者の一般的認識のいずれから見ても「12歳以下向け」と判定される可能性が非常に高い製品です。</li>
+      <li>正確に言うと、書類の紙だけは自分で作れます。でも、その書類に書く「安全です」という根拠の<b>検査結果</b>が、アメリカが認めた特別な検査所でちゃんと検査したものじゃないとダメなんです。</li>
+      <li>メーカーのホームページに「安全」と書いてあっても、それは証拠になりません。本物の検査報告書が必要です。</li>
+      <li>おもちゃは検査項目がたくさんあります。鉛が入っていないか、有害な化学物質が入っていないか、小さな部品が取れて飲み込まないか、燃えやすくないか…など。</li>
+      <li>検査費用は、1つの商品につき <b>7万円〜22万円くらい</b>。色や材料が多いともっと高くなります。</li>
+      <li>シルバニアファミリーやトミカは、どう見ても子ども向けのおもちゃなので、「大人のコレクター向けです」と言い張るのはムリがあります。</li>
     </ul>
     <div class="callout">
-      <span class="mark">⚠</span>商品が客観的に子ども向けであるにもかかわらず「17歳以上向け」と虚偽のラベルを貼る行為は、CPSCによって<b>意図的な規制回避</b>とみなされるリスクがあります。
+      <span class="mark">⚠</span>商品が明らかに子ども向けなのに「17歳以上向け」と嘘のラベルを貼るのは、アメリカから見れば「ルール逃れ」とみなされて、もっと大きなトラブルになる可能性があります。
     </div>
 
-    <h3>3-2. アパレル編</h3>
+    <h3>3-2. 服のこと</h3>
+    <p><b>大人用の服は、わりとゆるいです。</b></p>
     <ul>
-      <li>大人用アパレルは 16 CFR Part 1610（可燃性基準）の対象ですが、<b>第三者試験は原則不要</b>で、GCCによる自己認証が可能です。</li>
-      <li>以下は試験免除の対象となります（16 CFR 1610.1(d)）:
-        <ul>
-          <li><b>免除素材</b>: ポリエステル、ウール、ナイロン、アクリル、モダクリル、オレフィン（100%または混紡）</li>
-          <li><b>免除重量</b>: 平織り（Plain surface）生地で、重さが <b>2.6オンス/平方ヤード（約88.2g/㎡）以上</b> のもの。素材（綿・絹等）を問わない。</li>
-        </ul>
-      </li>
-      <li>逆に注意が必要な素材・形態:
-        <ul>
-          <li>薄手綿（薄いTシャツ、浴衣）、薄手シルク（スカーフ、着物）</li>
-          <li>起毛素材（フリース、フランネル等）で免除素材以外のもの</li>
-          <li>子ども用アパレルは全般的にCPCが必要（第三者試験必須）</li>
-          <li>子ども用パジャマ・寝巻きは最も厳格なカテゴリ（16 CFR 1615/1616 の自己消火性基準）</li>
-        </ul>
-      </li>
-      <li>中古アパレルについては、現行のCPSC規則では再販業者の証明書発行・第三者試験は免除されています（<a href="https://www.cpsc.gov/Business--Manufacturing/Business-Education/ResaleThrift-Stores-Information-Center" target="_blank" rel="noopener noreferrer">Resale/Thrift Stores Information Center</a>参照）。ただし、2026年7月eFilingでの具体的な申告手順（Disclaim コード等）については<b>要確認</b>の段階です。</li>
+      <li>大人用の服は、自分で「これは安全ですよ」と宣言するだけでOKな場合が多いです（これが GCC という書類）。</li>
+      <li>特に、<b>ポリエステル・ウール・ナイロン・アクリル</b>などで作られた服は、検査自体が免除されます。</li>
+      <li>厚手の綿（ジーンズ、厚手のシャツなど）も免除になります。</li>
+      <li>ただし、<b>薄手の綿（薄いTシャツ、浴衣など）や薄手の絹（スカーフ、着物など）</b>は注意が必要です。</li>
+    </ul>
+    <p><b>子ども用の服は厳しいです。</b></p>
+    <ul>
+      <li>子ども用（12歳以下向け）の服は、おもちゃと同じくCPC書類が必要で、検査も必要です。</li>
+      <li>特に、子ども用のパジャマや寝巻きは一番厳しいです。燃えにくさの検査があって、普通の綿100%のゆるっとした服はほぼNGになります。</li>
+    </ul>
+    <p><b>中古の服は？</b></p>
+    <ul>
+      <li>アメリカのルールでは、中古品の再販は検査も書類も免除されています（<a href="https://www.cpsc.gov/Business--Manufacturing/Business-Education/ResaleThrift-Stores-Information-Center" target="_blank" rel="noopener noreferrer">CPSCの公式ページ</a>にそう書いてあります）。</li>
+      <li>ただし、2026年7月からの新しい申告手続きで、中古品をどう申告するかの具体的な方法は、まだはっきりしていません。</li>
     </ul>
 
     <div class="callout">
-      <span class="mark">⚠</span><b>中古品の扱いについての注意:</b> CPSC公式の現行ルールでは、中古品再販業者は証明書発行・第三者試験が免除されています。しかし、eBayから日本セラー宛に届いた2026年7月向け通知では、中古品の免除について明示的な記載がありません。eBayが独自にセラーに求める運用がCPSC規則と異なる可能性があり、実務での取扱いは<b>今後の公式情報待ち・要確認</b>です。
+      <span class="mark">⚠</span><b>中古品についての注意:</b> アメリカの公式ルールでは、中古品は検査や書類が免除されています。でも、eBayから日本のセラーに届いた2026年7月向けのお知らせには、中古品を免除する、とは書かれていません。eBayが独自に「中古でも書類を出してね」と求めてくる可能性もあるので、<b>実際にどうなるかは今後の公式発表待ち</b>です。
     </div>
   </section>
 
   <!-- Section 4 -->
   <section>
-    <h2>4. カテゴリ別リスク表</h2>
-    <p>玩具・フィギュア・アパレル・中古品を横断した判定の目安です。実際の運用は公式情報と個別判断が必要です。</p>
+    <h2>4. 商品ごとの難しさ早見表</h2>
+    <p>商品の種類ごとに、どれくらい書類が大変かをまとめました。</p>
     <div class="table-wrap">
       <table>
         <thead>
           <tr>
-            <th>カテゴリ</th>
-            <th>証明書</th>
-            <th>第三者試験</th>
-            <th>中古免除</th>
-            <th>備考</th>
+            <th>商品の種類</th>
+            <th>必要な書類</th>
+            <th>検査</th>
+            <th>中古は免除？</th>
+            <th>メモ</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>大人用一般アパレル<br>（ポリエステル・ウール・厚手綿）</td>
-            <td>GCC（多くは実質免除）</td>
-            <td class="risk-lo">不要</td>
-            <td>可</td>
-            <td>1610.1(d) の免除素材・重量に該当すれば実質免除</td>
+            <td>大人用の服<br>（Tシャツ、ジーンズなど）</td>
+            <td>GCC<br>（多くは免除）</td>
+            <td class="risk-lo">いらない</td>
+            <td>OK</td>
+            <td>ポリエステル、ウール、厚手の綿なら実質免除</td>
           </tr>
           <tr>
-            <td>子ども用アパレル</td>
+            <td>子ども用の服</td>
             <td>CPC</td>
-            <td class="risk-hi">必須</td>
-            <td>不可</td>
-            <td>鉛試験も必須。小売仕入れ転売は困難</td>
+            <td class="risk-hi">必要</td>
+            <td>新品は不可</td>
+            <td>新品を仕入れて売るのはむずかしい</td>
           </tr>
           <tr>
             <td>子ども用パジャマ・寝巻き</td>
-            <td>CPC（最厳格）</td>
-            <td class="risk-hi">必須</td>
-            <td>不可</td>
-            <td>16 CFR 1615/1616 自己消火性基準。綿100%のゆったり服はほぼNG</td>
+            <td>CPC<br>（一番きびしい）</td>
+            <td class="risk-hi">必要</td>
+            <td>新品は不可</td>
+            <td>燃えにくさの検査があり、綿100%はほぼNG</td>
           </tr>
           <tr>
             <td>着物・浴衣（大人用）</td>
             <td>GCC</td>
             <td class="risk-mid">要注意</td>
-            <td>中古は可</td>
-            <td>薄手綿・薄手絹は2.6oz未満のことが多く、境界判定</td>
+            <td>中古はOK</td>
+            <td>生地が薄い絹・綿なので境目にあたる</td>
           </tr>
           <tr>
-            <td>ヴィンテージ古着</td>
+            <td>中古の服<br>（ヴィンテージ古着）</td>
             <td>再販は免除<br>（現行ルール）</td>
-            <td class="risk-lo">不要</td>
-            <td>可</td>
-            <td>eFilingでの具体的申告手順は要確認</td>
+            <td class="risk-lo">いらない</td>
+            <td>OK</td>
+            <td>eBayの申告方法は要確認</td>
           </tr>
           <tr>
             <td>スカーフ・帽子・手袋</td>
-            <td>原則なし</td>
-            <td class="risk-lo">不要</td>
-            <td>可</td>
-            <td>1610 対象外カテゴリ。大型スカーフは対象になる場合あり</td>
+            <td>原則いらない</td>
+            <td class="risk-lo">いらない</td>
+            <td>OK</td>
+            <td>大きなスカーフだけ例外の可能性あり</td>
           </tr>
           <tr>
-            <td>新品玩具<br>（シルバニア、トミカ等）</td>
+            <td>新品のおもちゃ<br>（シルバニア、トミカなど）</td>
             <td>CPC</td>
-            <td class="risk-hi">必須</td>
-            <td>不可</td>
-            <td>自作書類不可。正規卸ルートなしでは実質販売困難</td>
+            <td class="risk-hi">必要</td>
+            <td>新品は不可</td>
+            <td>書類を自分で作るのはムリ。メーカー仕入れないと厳しい</td>
           </tr>
           <tr>
-            <td>中古玩具</td>
+            <td>中古のおもちゃ</td>
             <td>再販は免除<br>（現行ルール）</td>
-            <td class="risk-lo">不要</td>
-            <td>可</td>
-            <td>eBayの2026年7月運用は要確認。安全基準・リコール品の回避は引き続き必要</td>
+            <td class="risk-lo">いらない</td>
+            <td>OK</td>
+            <td>eBayの運用は要確認。リコール品は売らない</td>
           </tr>
           <tr>
-            <td>フィギュア・人形の服</td>
+            <td>フィギュアや人形の服</td>
             <td>CPC</td>
-            <td class="risk-hi">必須</td>
-            <td>不可</td>
-            <td>「アパレル」ではなく「玩具」基準（ASTM F963）で判定</td>
+            <td class="risk-hi">必要</td>
+            <td>新品は不可</td>
+            <td>「服」ではなく「おもちゃ」の仲間として扱われる</td>
           </tr>
           <tr>
-            <td>大人向けコレクター<br>エディション玩具</td>
+            <td>大人向けの<br>コレクター限定品</td>
             <td>状況による</td>
             <td class="risk-mid">要注意</td>
             <td>—</td>
-            <td>14歳以上対象の客観的特徴（高価・壊れやすい・ディスプレイ専用等）が必要</td>
+            <td>高価・壊れやすい・飾り専用など、子どもが遊ばない特徴が必要</td>
           </tr>
         </tbody>
       </table>
@@ -341,34 +354,35 @@
 
   <!-- Section 5 -->
   <section>
-    <h2>5. 今後の選択肢</h2>
-    <p>現時点で考えられる方針を4つ挙げます。いずれも一長一短があり、単独ではなく組み合わせでの運用が現実的と考えられます。</p>
+    <h2>5. ではどうする？ — 4つの選び方</h2>
+    <p>今のところ考えられる方法は4つあります。どれか1つに絞るのではなく、組み合わせて使うのが現実的です。</p>
     <ol class="options">
       <li>
-        <span class="title">中古品に絞る</span>
-        <span class="desc">CPSCの現行ルールでは、中古品再販業者は証明書発行・第三者試験の義務から免除されています。原則的には最もシンプルな方針ですが、<b>eBayから日本セラーに届いた2026年7月通知では中古品の免除について明示的な記載がない</b>ため、実際のeFiling申告手順・eBayの運用ポリシーは今後の公式情報で要確認です。</span>
+        <span class="title">中古品だけを扱う</span>
+        <span class="desc">アメリカのルールでは中古品は検査や書類が免除されているので、いちばんシンプルな方法です。ただし、eBayが2026年7月以降に「中古でも書類を出してね」と言ってくる可能性もあるので、<b>公式発表を見ながら慎重に進める必要があります</b>。</span>
       </li>
       <li>
-        <span class="title">新品を「箱なし中古」として出品</span>
-        <span class="desc">開封・箱処分で Used 扱いにする方法。実務的には存在しますが、CPSCの運用上の裁量の範囲内であり、グレーゾーンの判断となります。</span>
+        <span class="title">新品を「箱なし中古」として出す</span>
+        <span class="desc">新品を開封して箱を捨てて「Used（中古）」として売る方法です。やっている人はいますが、アメリカ側の判断しだいで「これは中古とは言えないよ」と言われるかもしれないグレーゾーンです。</span>
       </li>
       <li>
-        <span class="title">新品はコレクター用（14歳以上対象）として明確に記載</span>
-        <span class="desc">ただし、商品自体が明らかに子ども向けの場合は適用できません。高価・壊れやすい・ディスプレイ専用など、客観的な特徴を備えた商品にのみ有効と考えられます。</span>
+        <span class="title">新品は大人向けコレクター商品として売る</span>
+        <span class="desc">「14歳以上対象」とはっきり書いて売る方法です。ただし、誰が見ても子ども向けの商品にはこの方法は使えません。高価な限定品や、飾り専用の商品など、本当に子どもが遊ばないものだけにしましょう。</span>
       </li>
       <li>
-        <span class="title">メーカー仕入れルートの開拓</span>
-        <span class="desc">正規卸から試験レポート（Test Report）の入手が可能な関係を作る方針。Component Part Testing（16 CFR Part 1109）により、部品や材料の試験結果を流用できる場合があります。ただし、メーカーが試験結果を提供するケースは稀であり、時間のかかる取り組みとなります。</span>
+        <span class="title">メーカーから直接仕入れるルートをつくる</span>
+        <span class="desc">シルバニアファミリーを作っているエポック社など、メーカーから直接仕入れて、検査データも一緒にもらう方法です。時間と手間がかかりますが、本気で新品のおもちゃを売りたいならこれが正攻法です。</span>
       </li>
     </ol>
     <div class="note">
-      補足: 米国市場からの撤退と、EU（CE/EN71）・UK（UKCA）・豪州（AS/NZS ISO 8124）へのシフトも選択肢になります。現時点で、米国のような全出荷に対する電子申告の完全義務化を2026年に予定しているのは米国CPSCのみです。
+      <b>補足:</b> アメリカ向けの販売をやめて、ヨーロッパ・イギリス・オーストラリアに販売先を変えるという選択肢もあります。2026年7月からこういう厳しい制度を始めるのは、今のところアメリカだけです。
     </div>
   </section>
 
   <!-- Section 6 -->
   <section class="refs">
-    <h2>6. 参考資料・出典</h2>
+    <h2>6. もっと詳しく知りたい人へ</h2>
+    <p>下のリンクは、全部アメリカ政府やCPSC公式の英語サイトです。元の情報にあたりたい人向けの資料です。</p>
 
     <h3>CPSC公式</h3>
     <ul>
@@ -404,10 +418,10 @@
 
   <footer class="bottom">
     <div class="disclaimer">
-      <b>免責事項:</b> 本資料はリサーチに基づく考察であり、法的助言ではありません。実際の販売・申告にあたっては、CPSC公式情報および専門家（弁護士・通関業者・認定試験所）に最終確認してください。記載内容は2026年4月8日時点のもので、規制は変更される可能性があります。
+      <b>ひとこと注意:</b> この資料は、私が調べた内容をまとめた「考察」です。法律のプロが書いたものではありません。実際に商品を売るときは、アメリカCPSCの公式情報や、税関の専門家に必ず確認してください。ルールは変わることもあるので、2026年7月が近づいたら最新情報をチェックしましょう。
     </div>
     <p>公開日: 2026年4月8日</p>
-    <p>更新履歴: 2026-03-29 初版（legacy.html） / 2026-04-08 リサーチ反映による改訂 / 2026-04-08 中古品の扱いを「現行ルールでは免除だが、eBayの2026年7月運用は要確認」に修正、参考資料の404リンクを実在URLに差し替え</p>
+    <p>更新履歴: 2026-03-29 初版（<a href="./legacy.html" target="_blank" rel="noopener noreferrer">legacy.html</a>）/ 2026-04-08 リサーチを反映して全面改訂 / 2026-04-08 中古品の扱いを「現行ルールでは免除だが、eBayの対応は要確認」に修正 / 2026-04-08 読みやすさを優先して全文をやさしい言葉に書き直し</p>
     <p>リポジトリ: <a href="https://github.com/naokijodan/cpsc-proposal" target="_blank" rel="noopener noreferrer">github.com/naokijodan/cpsc-proposal</a></p>
   </footer>
 
