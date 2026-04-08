@@ -1,0 +1,156 @@
+{
+  "research_date": "2026-04-08",
+  "subject": "CPSC 2026/7/8 新規制 - アパレル編",
+  "questions": [
+    {
+      "id": "A1",
+      "title": "大人用アパレルのGCC要件と第三者試験の有無",
+      "fact": [
+        "大人用衣類は16 CFR Part 1610（衣類用繊維の可燃性基準）の対象となるが、CPSC認定の第三者試験所での試験は「必須ではない」（16 CFR Part 1110準拠）。",
+        "自己認証（GCCの発行）は可能だが、その根拠として「合理的な試験プログラム（Reasonable Testing Program）」が必要。これには自社での試験や、サプライヤーからの保証（Guaranty）が含まれる。",
+        "ただし、CPSCは「試験免除素材（1610.1(d)）」に該当する大人用アパレルについては、GCCの発行・保持を求めない「執行裁量（Enforcement Discretion）」を現在適用している。"
+      ],
+      "sources": ["https://www.cpsc.gov/Business--Manufacturing/Business-Education/Business-Guidance/Clothing", "https://www.ecfr.gov/current/title-16/part-1610"],
+      "inference": "多くの一般的な大人用衣類は試験免除素材に該当するため、現時点ではGCCの発行義務そのものが免除されているケースが多い。しかし、2026年7月のeFiling義務化により、免除品であっても「Disclaimerコード」の入力という形で何らかの申告が必要になる。",
+      "unknown": "2026年7月以降、現在認められている「GCC発行不要」の執行裁量が継続されるか、あるいは形式的なGCC発行が必須化されるかの最終決定。",
+      "confidence": "high"
+    },
+    {
+      "id": "A2",
+      "title": "16 CFR Part 1610 の対象と免除",
+      "fact": [
+        "免除基準1（素材）: ポリエステル、ウール、ナイロン、アクリル、モダクリル、オレフィンのいずれか100%、またはこれらの混紡のみで構成される生地は、重さにかかわらず試験免除。",
+        "免除基準2（重さ）: 平織り（Plain surface）生地で、重さが 2.6オンス/平方ヤード（約88.2g/平米）以上のものは、素材（綿、絹等）にかかわらず試験免除。",
+        "試験が必要な例: 2.6オンス未満の薄い綿（Tシャツ、浴衣等）、薄い絹（スカーフ、着物等）、および起毛素材（フリース、フランネル等）で上記免除素材以外のもの。"
+      ],
+      "sources": ["https://www.cpsc.gov/Business--Manufacturing/Business-Education/Business-Guidance/Clothing"],
+      "inference": "日本の伝統的な「浴衣（綿の薄手生地）」や「正絹の着物（薄手の絹）」は、2.6オンス未満であることが多く、また免除繊維（ポリエステル等）100%でない限り、厳密には試験対象となる可能性が高い。",
+      "unknown": "日本独自の多層構造を持つ着物の「重さ」をどう判定するか（1層ごとの判定か、製品全体か）。",
+      "confidence": "high"
+    },
+    {
+      "id": "A3",
+      "title": "中古品・古着・伝統衣料の扱い",
+      "fact": [
+        "中古品（Used/Vintage）も理論上は安全基準に適合している必要があるが、通常、中古アパレルの再販業者に新たな試験やGCC発行を求めることは一般的ではない（Secondary Market Resellersガイダンス）。",
+        "2026年7月のeFiling義務化では、中古品や製造詳細不明の商品向けに「Disclaimer A」や「Disclaimer B」という申告区分が用意される予定。",
+        "「Disclaimer B (Code 130.006)」は、CPSCが証明書を求めていない（執行裁量下にある）製品に使用される。"
+      ],
+      "sources": ["https://www.cpsc.gov/Business--Manufacturing/Business-Education/Secondary-Market-Resellers-Thrift-Stores-and-Relief-Organizations", "https://www.cpsc.gov/eFiling"],
+      "inference": "古着や中古着物の販売については、eFiling時に「Disclaimer B」を選択することで、詳細な製造日や試験データの入力を回避できる可能性が高い。ただし「商用転売」の規模が非常に大きい場合は、輸入者としての責任を問われるリスクが残る。",
+      "unknown": "「アンティーク」と「一般中古」を分ける明確な基準。和装小物が「アパレル」か「雑貨（規制外）」かの境界線。",
+      "confidence": "medium"
+    },
+    {
+      "id": "A4",
+      "title": "「素材・生地・状態」が判断要素になる意味",
+      "fact": [
+        "素材: 免除繊維（ポリエステル等）か否か。",
+        "生地: 平織り（Plain）か起毛（Raised）か、および重さが2.6オンス以上か否か。",
+        "状態: 新品（商用流通品）か中古（個人所有からの再販）か。中古の場合、製造データがないことが許容される「Disclaimer」の対象になりやすい。"
+      ],
+      "sources": ["https://www.cpsc.gov/eFiling", "eBay Japan案内メール"],
+      "inference": "eBayの言う「商品の状態」とは、eFilingにおいて「正規の証明書（GCC）を出せる新品」か「データ不明のためDisclaimerで申告する中古・一点物」かを分けるための重要なフラグを指していると考えられる。",
+      "unknown": "NWT（タグ付き新品）のデッドストック古着が「新品」として厳格なGCCを求められるリスクの有無。",
+      "confidence": "medium"
+    },
+    {
+      "id": "A5",
+      "title": "特定カテゴリ別のリスク判定",
+      "fact": [
+        "子ども用衣類: 12歳以下対象はすべてCPCが必要。第三者試験（鉛、可燃性）必須。",
+        "子ども用パジャマ: 16 CFR 1615/1616の厳格な「自己消火性」基準が適用され、綿100%のゆったりした服はほぼNG。",
+        "大人用スカーフ・帽子・手袋: 16 CFR 1610の適用対象外（ただしスカーフは大きさと形状により対象になる場合あり）。",
+        "人形の服: 「玩具」としてASTM F963の対象となり、12歳以下向けならCPCが必要。"
+      ],
+      "sources": ["https://www.cpsc.gov/Business--Manufacturing/Business-Education/Business-Guidance/Childrens-Sleepwear", "https://www.cpsc.gov/Business--Manufacturing/Business-Education/Business-Guidance/Toys"],
+      "inference": "「浴衣」を子供用として、あるいは「寝巻き」として販売するのは極めてリスクが高い。大人用ジーンズやセーター（ウール/ポリエステル）は最も安全なカテゴリ。フィギュア用の服は「アパレル」ではなく「玩具」の基準で判定される。",
+      "unknown": "和装小物の「帯」や「巾着」がアパレル（規制対象）に含まれるか雑貨（対象外）かの公式見解。",
+      "confidence": "high"
+    },
+    {
+      "id": "A6",
+      "title": "日本セラーの実務対応（GCC/eFiling）",
+      "fact": [
+        "自己認証GCCの必要項目: 製品識別、適用規則（16 CFR 1610）、輸入者情報、記録保持者情報、製造日・場所、試験日・場所。",
+        "eFiling時の対応: 2026年7月以降、通関時にこれらを入力。製造日等が不明な中古品はDisclaimerコード（130.006等）を使用する方向。",
+        "小売り仕入れの新品: 素材が免除対象（ポリエステル100%等）であれば、GCC発行義務がないため、Disclaimer申告で対応できる可能性が高い。"
+      ],
+      "sources": ["https://www.cpsc.gov/eFiling", "https://www.cpsc.gov/Business--Manufacturing/Business-Education/Business-Guidance/General-Certificate-of-Conformity-GCC"],
+      "inference": "セラーが自ら試験所に送る必要はないが、仕入れ時に「素材表示タグ」を確認し、ポリエステル、ウール、ナイロン等の免除素材であることを把握しておくことが、トラブル回避の鍵となる。",
+      "unknown": "eBayがセラー向けに自動生成ツールやDisclaimer選択UIを提供するかどうか。",
+      "confidence": "medium"
+    }
+  ],
+  "category_matrix": {
+    "adult_general_apparel": {
+      "cert_required": "GCC (Exempt if 1610.1(d) applies)",
+      "third_party_testing": "no",
+      "used_exempt": "yes (via Disclaimer B)",
+      "notes": "ポリエステル、ウール混、2.6oz以上の綿は実質免除。薄手綿/絹は要注意。"
+    },
+    "children_apparel": {
+      "cert_required": "CPC",
+      "third_party_testing": "yes",
+      "used_exempt": "no",
+      "notes": "12歳以下向けは厳格。鉛試験も必須。小売り仕入れ転売は困難。"
+    },
+    "children_sleepwear": {
+      "cert_required": "CPC (Strict)",
+      "third_party_testing": "yes",
+      "used_exempt": "no",
+      "notes": "最もリスクが高い。日本の浴衣を寝巻きとして売るのは厳禁。"
+    },
+    "kimono_yukata": {
+      "cert_required": "GCC (Adult) / CPC (Child)",
+      "third_party_testing": "Adult: no (but needs data if thin cotton) / Child: yes",
+      "used_exempt": "Adult used: yes",
+      "notes": "素材が絹・綿のため重量(2.6oz)が境界。中古大人用ならリスク低。"
+    },
+    "vintage_used_clothing": {
+      "cert_required": "GCC (Technically) / Disclaimer (Practical)",
+      "third_party_testing": "no",
+      "used_exempt": "yes",
+      "notes": "2026年eFilingではDisclaimer B (130.006)での申告が現実的。"
+    },
+    "scarves_hats_gloves": {
+      "cert_required": "None",
+      "third_party_testing": "no",
+      "used_exempt": "yes",
+      "notes": "16 CFR 1610の対象外カテゴリ。ただし大型スカーフは対象になる可能性あり。"
+    },
+    "figure_doll_clothes": {
+      "cert_required": "CPC",
+      "third_party_testing": "yes",
+      "used_exempt": "no",
+      "notes": "「アパレル」ではなく「玩具」基準(ASTM F963)で判定される。"
+    }
+  },
+  "summary": {
+    "gcc_self_certifiable": "yes",
+    "third_party_testing_required_for_adult_apparel": "no",
+    "used_apparel_exempt": "partial (Exempt from testing/GCC but needs eFiling Disclaimer)",
+    "safest_categories_for_jp_seller": [
+      "大人用中古アパレル全般（古着、中古着物）",
+      "ポリエステル、ウール、ナイロン100%の新品アパレル",
+      "2.6オンス以上の平織り生地（デニム、厚手シャツ等）",
+      "大人用帽子、短い手袋、一般的な靴"
+    ],
+    "risky_categories_to_avoid": [
+      "子ども用（12歳以下）アパレル新品全般",
+      "子ども用パジャマ、寝巻き、ベビー服",
+      "シルクのスカーフ（薄手の場合、試験とGCCが必要）",
+      "フィギュア・人形用の服（12歳以下対象として販売する場合）"
+    ],
+    "recommended_strategy": "1. 12歳以下向け商品は原則として扱わない（CPC/第三者試験が不可能なため）。 2. 新品アパレルは「免除素材（ポリエステル等）」を優先的に扱う。 3. 中古アパレル・古着は、2026年7月以降、通関時に「中古品/免除品」としてのDisclaimerコードを正しく申告する。 4. 浴衣や着物を売る場合は「Adult Collectible」や「Vintage」としての属性を明確にし、子供用寝巻きと誤解されないようにする。"
+  },
+  "red_flags": [
+    "「子供用浴衣」を寝巻き（Sleepwear）として販売すると、16 CFR 1615/1616違反で高確率でリコール・没収の対象となる。",
+    "2026年7月8日以降、低額発送でもeFilingが義務化されるため、無申告での発送は通関で止まるリスクがある。",
+    "素材タグがない衣類や素材不明の商品は、免除の根拠が示せないためGCC発行ができず、リスクが高まる。"
+  ],
+  "open_questions": [
+    "和装小物の「帯」や「和装小物」が16 CFR 1610の適用除外（アクセサリー扱い）になるかどうかの詳細な境界線。",
+    "配送キャリア（FedEx, DHL等）が荷主（セラー）に代わって、素材情報に基づき自動でDisclaimerコードを付与する仕組みの有無。"
+  ]
+}

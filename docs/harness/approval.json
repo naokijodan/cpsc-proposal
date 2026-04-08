@@ -1,0 +1,51 @@
+{
+  "task_id": "cpsc-proposal-renewal",
+  "approved_at": "2026-04-08T06:00:00Z",
+  "approved_by": "user (via parent session)",
+  "parent_review_verdict": "PASS",
+  "child_b_review": "skipped (user approved simplification for static HTML task)",
+  "acceptance_criteria_all_pass": true,
+  "deployment_scope": {
+    "repos_to_push": [
+      {
+        "path": "/Users/naokijodan/Desktop/cpsc-proposal",
+        "remote": "https://github.com/naokijodan/cpsc-proposal.git",
+        "branch": "main",
+        "files_to_add": [
+          "index.html",
+          "legacy.html",
+          "docs/harness/task-spec.md",
+          "docs/harness/review-context.json",
+          "docs/harness/research-report.json",
+          "docs/harness/research-report-apparel.json",
+          "docs/harness/implementation-report.json",
+          "docs/harness/approval.json"
+        ],
+        "files_to_exclude": [
+          ".harness-worker-implement/",
+          ".harness-worker-review/"
+        ],
+        "commit_message": "feat: 2026年7月CPSC新規制の考察にリニューアル — 玩具・アパレル編リサーチ反映\n\n- 新index.html: 6セクション構成（背景/最初に考えた案/リサーチ結果/カテゴリ別リスク表/4つの選択肢/参考資料）\n- legacy.html: 旧提案書を保持（検討経緯として参照）\n- docs/harness/: リサーチレポート（玩具編・アパレル編）を同梱"
+      },
+      {
+        "path": "/Users/naokijodan/Desktop/プロジェクト/portfolio",
+        "remote": "https://github.com/naokijodan/portfolio.git",
+        "branch": "main",
+        "files_to_add": ["index.html"],
+        "commit_message": "docs: cpsc-proposal のdescriptionを新内容に更新"
+      }
+    ],
+    "github_pages_urls_to_verify": [
+      "https://naokijodan.github.io/cpsc-proposal/",
+      "https://naokijodan.github.io/cpsc-proposal/legacy.html",
+      "https://naokijodan.github.io/portfolio/"
+    ]
+  },
+  "post_deployment_tasks": [
+    "GitHub Pages公開の確認（HTTP 200レスポンス）",
+    "新index.htmlとlegacy.htmlの両方が閲覧可能か確認",
+    "portfolioのcpsc-proposal descriptionが新内容になっているか確認",
+    "deploy-report.jsonを書き出す",
+    "harness-notify.shで親に通知"
+  ]
+}

@@ -1,0 +1,235 @@
+<!-- このページは 2026年3月29日 時点での旧提案書です。現在の考察は index.html を参照してください。 -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【旧版】CPSC対応提案書 — eBay出品における米国製品安全規制への対応</title>
+<style>
+  :root {
+    --brand: #1a365d;
+    --brand-light: #2b6cb0;
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --text: #2d3748;
+    --muted: #718096;
+    --border: #e2e8f0;
+    --danger: #c53030;
+    --danger-bg: #fff5f5;
+    --danger-border: #fed7d7;
+    --success: #276749;
+    --success-bg: #f0fff4;
+    --success-border: #c6f6d5;
+    --warn: #975a16;
+    --warn-bg: #fffff0;
+    --warn-border: #fefcbf;
+    --info-bg: #ebf8ff;
+    --info-border: #bee3f8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font: 16px/1.7 'Hiragino Sans', 'Noto Sans JP', system-ui, sans-serif; }
+  .container { max-width: 900px; margin: 0 auto; padding: 24px 20px; }
+
+  .legacy-banner { background: #fffaf0; border: 2px solid #f6ad55; border-radius: 10px; padding: 14px 18px; margin-bottom: 20px; font-size: 14px; color: #7b341e; }
+  .legacy-banner b { color: #9c4221; }
+  .legacy-banner a { color: #c05621; font-weight: 700; }
+
+  /* Header */
+  .header { background: linear-gradient(135deg, #1a365d, #2b6cb0); color: #fff; border-radius: 16px; padding: 32px 28px; margin-bottom: 24px; }
+  .header h1 { font-size: 22px; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; opacity: 0.9; }
+  .header .date { font-size: 13px; opacity: 0.7; margin-top: 12px; }
+
+  /* Sections */
+  h2 { font-size: 18px; color: var(--brand); border-left: 4px solid var(--brand-light); padding-left: 12px; margin: 32px 0 16px; }
+  h3 { font-size: 15px; color: var(--text); margin: 20px 0 10px; }
+
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+
+  .alert { border-radius: 10px; padding: 16px 18px; margin-bottom: 16px; }
+  .alert-danger { background: var(--danger-bg); border: 1px solid var(--danger-border); }
+  .alert-danger .label { color: var(--danger); font-weight: 800; }
+  .alert-success { background: var(--success-bg); border: 1px solid var(--success-border); }
+  .alert-success .label { color: var(--success); font-weight: 800; }
+  .alert-warn { background: var(--warn-bg); border: 1px solid var(--warn-border); }
+  .alert-warn .label { color: var(--warn); font-weight: 800; }
+  .alert-info { background: var(--info-bg); border: 1px solid var(--info-border); }
+
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th { background: #edf2f7; text-align: left; padding: 10px 12px; font-weight: 700; border-bottom: 2px solid var(--border); }
+  td { padding: 10px 12px; border-bottom: 1px solid var(--border); }
+  tr:hover td { background: #f7fafc; }
+
+  ul, ol { padding-left: 24px; margin: 8px 0; }
+  li { margin: 6px 0; }
+
+  .tag { display: inline-block; padding: 2px 10px; border-radius: 20px; font-size: 12px; font-weight: 700; }
+  .tag-danger { background: #fed7d7; color: var(--danger); }
+  .tag-warn { background: #fefcbf; color: var(--warn); }
+  .tag-ok { background: #c6f6d5; color: var(--success); }
+
+  .source { font-size: 12px; color: var(--muted); margin-top: 4px; }
+  .source a { color: var(--brand-light); }
+
+  .proposal-box { background: linear-gradient(135deg, #f0fff4, #ebf8ff); border: 2px solid #68d391; border-radius: 14px; padding: 24px; margin: 20px 0; }
+  .proposal-box h3 { color: var(--success); margin-top: 0; }
+
+  .footer { text-align: center; padding: 24px 0; color: var(--muted); font-size: 13px; border-top: 1px solid var(--border); margin-top: 32px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Legacy banner -->
+  <div class="legacy-banner">
+    <b>⚠ この提案書は旧版です。</b> 2026年3月29日時点の検討内容で、現在は内容を更新しています。
+    最新版はこちら → <a href="./index.html">index.html（2026年4月8日版）</a>
+  </div>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>CPSC対応提案書</h1>
+    <p class="subtitle">eBay出品における米国製品安全規制（CPSC）への対応方針</p>
+    <p class="date">作成日: 2026年4月7日 ｜ プラスポート物販部 勉強会資料（2026/3/29）を受けて</p>
+  </div>
+
+  <!-- 1. 現状 -->
+  <h2>1. 何が起きるのか</h2>
+
+  <div class="alert alert-danger">
+    <p class="label">2026年7月8日から、新しいルールが始まります</p>
+    <p style="margin-top:8px;">アメリカに輸入される<b>子ども向け製品</b>（12歳以下が対象）は、<b>CPC（子ども向け製品証明書）</b>の電子申告が義務化されます。書類がないと、以下のリスクがあります：</p>
+    <ul style="margin-top:8px;">
+      <li><b>通関で止められる</b>（発送遅延・検査・保管料）</li>
+      <li><b>販売停止</b></li>
+      <li><b>eBayアカウント制限</b></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>対象になる「子ども向け製品」とは？</h3>
+    <p>CPSCの定義では、<b>12歳以下の子どもを主な対象として設計・意図された製品</b>が該当します。</p>
+    <table>
+      <tr><th>リスク</th><th>商品例</th><th>理由</th></tr>
+      <tr><td><span class="tag tag-danger">高</span></td><td>フィギュア（子供向け）、ぬいぐるみ、おもちゃ</td><td>子ども向けと判断されやすい</td></tr>
+      <tr><td><span class="tag tag-warn">中</span></td><td>トレーディングカード、ドール、ミニカー</td><td>コレクター向けでも子ども向けと誤認される可能性</td></tr>
+      <tr><td><span class="tag tag-ok">低</span></td><td>時計、ジュエリー、カメラ、バッグ</td><td>通常は子ども向けとみなされない</td></tr>
+    </table>
+    <p class="source">出典: <a href="https://www.cpsc.gov/Business--Manufacturing/Business-Education/Childrens-Products" target="_blank" rel="noopener noreferrer">CPSC - Children's Products</a></p>
+  </div>
+
+  <div class="card">
+    <h3>私たちの出品物への影響</h3>
+    <p>私たちが出品しているのは<b>コレクター向け・大人向けの中古品</b>です。子ども向け製品ではありません。しかし、eBayの出品情報で「子ども向けではない」ことを<b>明確に示さないと</b>、規制の対象として扱われるリスクがあります。</p>
+  </div>
+
+  <!-- 2. eBayでの対応方法 -->
+  <h2>2. eBayで「子ども向けではない」ことを示す方法</h2>
+
+  <div class="card">
+    <h3>eBay API調査結果（実際に確認済み）</h3>
+    <p>eBayのシステムには、商品の対象年齢を示すフィールドがあります。以下は実際にeBay APIで確認した結果です。</p>
+    <table>
+      <tr><th>カテゴリ</th><th>使えるフィールド</th><th>設定する値</th></tr>
+      <tr><td>Action Figures（フィギュア）</td><td>Age Level</td><td><b>17 Years & Up</b></td></tr>
+      <tr><td>Dolls（ドール）</td><td>Age Level</td><td><b>17 Years & Up</b></td></tr>
+      <tr><td>Stuffed Animals（ぬいぐるみ）</td><td>Age Level</td><td><b>17 Years & Up</b></td></tr>
+      <tr><td>Card Games（トレカ）</td><td>Age Level</td><td><b>17 Years & Up</b></td></tr>
+      <tr><td>Collectible Figures</td><td>Age Level</td><td><b>17+</b></td></tr>
+      <tr><td>Sculptures & Figurines</td><td>Department</td><td><b>Adults</b></td></tr>
+      <tr><td>Animation Figures</td><td colspan="2" style="color:var(--danger);">該当フィールドなし</td></tr>
+    </table>
+    <p class="source">出典: eBay Taxonomy API (getItemAspectsForCategory) — 2026年4月7日確認</p>
+    <p style="margin-top:8px;"><b>注意:</b> 「13+」という選択肢はeBayに存在しません。最も近い値は<b>「17 Years & Up」</b>または<b>「Adults」</b>です。</p>
+  </div>
+
+  <!-- 3. 解決策の提案 -->
+  <h2>3. 解決策 — 3つのパターン</h2>
+
+  <div class="card">
+    <h3>パターン1: 出品テンプレート（HTML）に免責文言を追加</h3>
+    <p>出品ページの説明文（Description）に、「この商品はコレクター向けであり、子ども向けではない」という文言を目立つ位置に追記します。</p>
+    <ul>
+      <li><b>メリット:</b> 全出品に一律適用できる。人間（バイヤー・税関・審査官）に直接伝わる</li>
+      <li><b>メリット:</b> 万が一の際、異議申し立ての証拠になる</li>
+      <li><b>デメリット:</b> eBayのシステム上の分類には影響しない（検索フィルター等）</li>
+    </ul>
+    <div class="alert alert-info" style="margin-top:12px;">
+      <p><b>追記イメージ（英語）:</b></p>
+      <p style="margin-top:8px; font-style:italic;">"This item is intended for adult collectors aged 17 and above. It is not designed or intended for children under 14 years of age."</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>パターン2: 一括シートV3のItem Specifics出力を変更</h3>
+    <p>一括シートの自動出力で、Age Level / Department フィールドを追加します。</p>
+    <ul>
+      <li><b>メリット:</b> eBayのシステムに「17+」「Adults」が登録される</li>
+      <li><b>デメリット:</b> Item Specificsには10件の登録制限（EAGLE制限）があるため、<b>既存のフィールドを2つ削る</b>必要がある</li>
+      <li><b>デメリット:</b> 削るフィールド（例: Country of Origin, Grade）の情報が出品から消える</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>パターン3: EAGLEの参考IDテンプレートで一律設定</h3>
+    <p>EAGLEの出品テンプレート（参考ID）に、Age Level = "17 Years & Up" / Department = "Adults" を一律で設定します。</p>
+    <ul>
+      <li><b>メリット:</b> eBayのシステムに直接反映される</li>
+      <li><b>メリット:</b> 一括シートの10件制限に影響しない（別枠で設定）</li>
+      <li><b>メリット:</b> 全出品に一律適用できる</li>
+      <li><b>デメリット:</b> EAGLEのテンプレート設定作業が必要</li>
+    </ul>
+  </div>
+
+  <!-- 4. 推奨案 -->
+  <div class="proposal-box">
+    <h3>推奨案: パターン1 + パターン3 の組み合わせ</h3>
+    <p style="margin-top:8px;">以下の2つを組み合わせることで、<b>一括シートの既存機能を壊さず</b>に対応できます。</p>
+    <table>
+      <tr><th>対応</th><th>内容</th><th>効果</th></tr>
+      <tr>
+        <td><b>テンプレート追記</b></td>
+        <td>出品HTMLの上部に「コレクター向け・17歳以上対象」の免責文言を追加</td>
+        <td>人間向けの明示（税関・バイヤー・審査官）</td>
+      </tr>
+      <tr>
+        <td><b>EAGLEテンプレート</b></td>
+        <td>参考IDテンプレートにAge Level / Departmentを一律設定</td>
+        <td>eBayシステム上の分類（検索フィルター・コンプライアンスチェック）</td>
+      </tr>
+    </table>
+    <p style="margin-top:12px;"><b>この方法なら、一括シートV3のItem Specifics（10件枠）を変更する必要がありません。</b></p>
+  </div>
+
+  <!-- 5. その他の注意点 -->
+  <h2>4. その他の注意点</h2>
+
+  <div class="card">
+    <ul>
+      <li><b>タイトルに「Toy」を使わない:</b> CPSCはタイトルや説明文も対象者の判断材料にします。「Figure」「Collectible」「Model」等の表現を使うことを推奨します</li>
+      <li><b>パッケージの年齢表記との矛盾に注意:</b> 商品パッケージに「3+」等の記載がある場合、Item Specificsで「17+」と設定すると矛盾が生じる可能性があります。パッケージなしで出品するか、「対象年齢はコレクター基準で設定」と補足する方法があります</li>
+      <li><b>Animation Figures カテゴリ:</b> eBayにAge Level / Departmentの選択肢が存在しないため、テンプレート（パターン1）での対応が特に重要です</li>
+      <li><b>eBayの今後の対応:</b> 7月の施行に向けて、eBayがフィールドを必須に変更する可能性があります。定期的な確認が必要です</li>
+    </ul>
+  </div>
+
+  <!-- 6. 参考資料 -->
+  <h2>5. 参考資料</h2>
+  <div class="card">
+    <ul>
+      <li><a href="https://www.cpsc.gov/eFiling" target="_blank" rel="noopener noreferrer">CPSC eFiling公式ページ</a></li>
+      <li><a href="https://www.cpsc.gov/FAQ/CPC" target="_blank" rel="noopener noreferrer">CPSC — CPC FAQ</a></li>
+      <li><a href="https://www.cpsc.gov/Business--Manufacturing/Business-Education/Childrens-Products" target="_blank" rel="noopener noreferrer">CPSC — Children's Products定義</a></li>
+      <li><a href="https://www.cpsc.gov/s3fs-public/Resellers-Guide-Updated-Final-3-3--21.pdf" target="_blank" rel="noopener noreferrer">CPSC — Resellers Guide</a></li>
+      <li>プラスポート物販部 勉強会資料（2026年3月29日）</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p>作成: 2026年4月7日 ｜ CPSC公式情報 + eBay Taxonomy API調査に基づく</p>
+    <p style="margin-top:6px;">この提案書は旧版です。最新版は <a href="./index.html">index.html</a> を参照してください。</p>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+{
+  "research_date": "2026-04-08",
+  "subject": "CPSC 2026/7/8 新規制への日本セラーの対応",
+  "questions": [
+    {
+      "id": "Q1",
+      "title": "CPCの発行要件",
+      "fact": [
+        "CPC（Children's Product Certificate）の発行責任は「米国への輸入者（Importer of Record）」または「米国内の製造業者」にある（16 CFR Part 1110.7）。",
+        "2026年7月8日より、すべての規制対象製品について、輸入申告時に電子データとしてCPC情報を提出する「eFiling」が義務化される。",
+        "CPCは自作（ドラフト作成）可能だが、その根拠となる試験結果は必ず「CPSC認定の第三者試験所」のものでなければならない（16 CFR Part 1107）。",
+        "GCC（一般適合証明書）は一般消費財向けで自己認証が可能だが、12歳以下を対象とする子供向け製品には必ずCPCが必要であり、第三者試験が必須である。"
+      ],
+      "sources": ["https://www.cpsc.gov/eFiling", "https://www.ecfr.gov/current/title-16/part-1110", "https://www.ecfr.gov/current/title-16/part-1107"],
+      "inference": "日本からeBayで直接発送する場合、受取人（バイヤー）が輸入者になるケースが多いが、商用販売の場合は発送者が「輸入者」としてのコンプライアンス責任を問われるリスクが高い。eFiling義務化により、データの裏付けがない発送は通関で拒否される可能性が極めて高い。",
+      "unknown": "eBay等のプラットフォームがセラーに代わって一括申告する仕組みを導入するかどうかは現時点で不明。",
+      "confidence": "high"
+    },
+    {
+      "id": "Q2",
+      "title": "「子ども向け製品」の判定基準",
+      "fact": [
+        "CPSCは「12歳以下の子供」を主な対象とする製品を子ども向け製品と定義する（16 CFR Part 1200）。",
+        "判定の4要素：メーカーの主張（対象年齢ラベル）、マーケティング手法、消費者の一般的認識、CPSC's 年齢判定ガイドライン。",
+        "シルバニアファミリー、トミカ、プラレール等は一般に「12歳以下向け玩具」として広く認識されており、子ども向け製品に該当する可能性が非常に高い。"
+      ],
+      "sources": ["https://www.cpsc.gov/s3fs-public/pdfs/blk_media_adg.pdf", "https://www.ecfr.gov/current/title-16/part-1200"],
+      "inference": "「大人向けコレクターアイテム」として免除を受けるには、極めて高価、壊れやすい、ディスプレイ専用、14歳以上対象の明確な表示など、子供が遊ぶのに適さない客観的な特徴が必要。標準的な玩具セットでこの主張を通すのは困難。",
+      "unknown": "特定の限定品（例：大人向けプレミアムトミカ）が個別に免除対象と判断される境界線はケースバイケース。",
+      "confidence": "high"
+    },
+    {
+      "id": "Q3",
+      "title": "試験費用の現実的な相場",
+      "fact": [
+        "1つのSKUあたりの試験費用は、概ね 500 USD 〜 1,500 USD 程度が相場（材料数や色数により変動）。",
+        "主な試験項目：鉛（塗料・基材）、フタル酸エステル（16 CFR 1307）、ASTM F963（物理的・機械的特性、可燃性）。",
+        "日本国内のCPSC認定試験所：SGSジャパン、テュフ・ラインランド・ジャパン、インターテック、ビューローベリタスなどが認定を受けている。"
+      ],
+      "sources": ["https://www.cpsc.gov/cgi-bin/labsearch/", "https://www.sgs.com/en-jp/consumer-goods-retail/toys-and-juvenile-products"],
+      "inference": "小規模な個人セラーが1アイテムごとに数万円〜十数万円の試験費用を負担するのは、小売仕入れの利益率では事実上不可能に近い。",
+      "unknown": "日本国内の試験所での具体的な日本語対応料金の最新リスト。",
+      "confidence": "medium"
+    },
+    {
+      "id": "Q4",
+      "title": "小売仕入れ業者の選択肢",
+      "fact": [
+        "「Component Part Testing（16 CFR Part 1109）」により、部品や材料の試験結果を流用することは可能だが、それには試験報告書（Test Report）の原本と「相当な注意（Due Care）」を払ったことの証明が必要。",
+        "メーカー（エポック社等）が公式に小売業者へ試験報告書を公開・提供しているケースは稀である。"
+      ],
+      "sources": ["https://www.ecfr.gov/current/title-16/part-1109"],
+      "inference": "小売店（Amazon/楽天）から購入した製品について、メーカーから直接試験レポートを入手できない限り、法令を遵守したCPCの発行は不可能。並行輸入業者としての継続は、正規卸ルートへの変更なしには極めて困難。",
+      "unknown": "大手メーカーがeBayセラー等の二次流通業者向けに試験結果を公開する動きがあるか。",
+      "confidence": "high"
+    },
+    {
+      "id": "Q5",
+      "title": "中古品の扱い",
+      "fact": [
+        "中古品（Used/Pre-owned）は一般に「第三者試験」や「CPC発行」の義務から免除されるが、安全基準（鉛含有量等）自体への適合は求められる。",
+        "2026年のeFiling義務化においても、免除対象品として申告するための「Exclusion Code（除外コード）」の入力が必要となる。"
+      ],
+      "sources": ["https://www.cpsc.gov/Business--Manufacturing/Business-Education/Secondary-Market-Resellers-Thrift-Stores-and-Relief-Organizations"],
+      "inference": "新品の小売仕入れ（せどり）よりも、真正の中古品・アンティーク・絶版品としての販売の方が、法規制上の回避策としては現実的。ただし「新品同様」を謳う中古品は新品とみなされるリスクがある。",
+      "unknown": "「中古品」と判定されるための具体的な使用感やパッケージ状態の基準（CPSCの運用上の裁量）。",
+      "confidence": "medium"
+    },
+    {
+      "id": "Q6",
+      "title": "免除条項の実態",
+      "fact": [
+        "14歳以上を対象とする「コレクター向けアイテム」は子ども向け製品の規制対象外となる。",
+        "Small Batch Manufacturer（小規模製造業者）登録により、一部の試験（Group B）が免除される仕組みがあるが、売上高制限（2026年は約148万ドル以下）と製造数制限（7,500個以下）があり、かつ鉛や小部品の試験は免除されない。"
+      ],
+      "sources": ["https://www.saferproducts.gov/BusinessRegister/SmallBatchManufacturer"],
+      "inference": "「17 Years & Up」等の表記のみで規制を回避するのは、製品自体が明らかに子供向け（例：シルバニア）である場合、虚偽申告とみなされるリスクがある。SBM免除は「製造者」向けであり、小売仕入れの「転売者」には適用されない可能性が高い。",
+      "unknown": "転売業者が自らを「製造者（プライベートラベル化）」としてSBM登録できるかどうかの法的解釈（通常は不可）。",
+      "confidence": "high"
+    },
+    {
+      "id": "Q7",
+      "title": "代替戦略（販売チャネル変更）",
+      "fact": [
+        "EU（CEマーク/EN71）、英国（UKCAマーク）、豪州（AS/NZS ISO 8124）はそれぞれ独自の玩具安全基準を持つ。",
+        "現時点で、米国のような「全出荷に対する電子申告の完全義務化」を2026年に予定しているのは米国CPSCのみである。"
+      ],
+      "sources": ["https://ec.europa.eu/growth/sectors/toys/safety_en"],
+      "inference": "米国市場が最も厳格化するため、CPCを用意できないセラーは、比較的緩やかな（または既存の申告フローで済む）EU/UK/AU/カナダ等へシフトするのが短期的な回避策となる。ただし、これらの国でも安全性責任は免れない。",
+      "unknown": "他国が米国のeFilingモデルを追随して導入するスケジュール。",
+      "confidence": "medium"
+    }
+  ],
+  "summary": {
+    "can_self_certify_cpc": "conditional",
+    "third_party_lab_required": "yes",
+    "cost_estimate_usd": "500 - 1500 per SKU",
+    "retail_sourcing_viability": "impossible",
+    "used_goods_exempt": "partial",
+    "recommended_strategy_for_jp_seller": "1. 12歳以下向け新品玩具の米国販売は、正規卸ルート（試験レポート入手可能）以外は停止を検討。2. コレクター向け（14歳以上対象）や中古品に商材をシフト。3. 米国以外の市場（EU/UK/AU）へターゲットを変更。"
+  },
+  "red_flags": [
+    "小売仕入れ（せどり）で入手した新品玩具に自分でCPCを発行することは、試験レポートがないため法的リスクが極めて高い。",
+    "2026年7月8日以降、低額発送（de minimis）であってもeFilingが求められ、データがない荷物は没収や返送の対象となる。",
+    "「17歳以上向け」と虚偽のラベルを貼る行為は、CPSCによる意図的な規制回避とみなされるリスクがある。"
+  ],
+  "open_questions": [
+    "配送業者が、個人セラー向けのeFiling代行入力インターフェースをどこまで提供するか。",
+    "日本メーカーが輸出セラー向けに共通の試験データポータル等を開設する可能性。"
+  ]
+}

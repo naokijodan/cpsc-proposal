@@ -1,0 +1,72 @@
+{
+  "session_type": "implement",
+  "task_id": "cpsc-proposal-renewal",
+  "status": "complete",
+  "timestamp": "2026-04-08T00:00:00Z",
+  "summary": "cpsc-proposal/index.html を新構成（6セクション: 背景、最初に考えた案、リサーチ結果、カテゴリ別リスク表、4つの選択肢、参考資料）で完全置換。旧index.htmlをlegacy.htmlに退避し、上部バナーとHTMLコメントメモを追加。portfolio/index.html のcpsc-proposal description を新内容に更新。",
+  "details": {
+    "files_changed": [
+      "/Users/naokijodan/Desktop/cpsc-proposal/index.html",
+      "/Users/naokijodan/Desktop/cpsc-proposal/legacy.html",
+      "/Users/naokijodan/Desktop/プロジェクト/portfolio/index.html"
+    ],
+    "tests_added": [],
+    "file_sizes": {
+      "index.html": "19528 bytes (約19.1 KB)",
+      "legacy.html": "13709 bytes (約13.4 KB)",
+      "portfolio/index.html": "(1箇所のdescription更新のみ)"
+    },
+    "self_review": {
+      "spec_compliance": "全受け入れ基準を満たしている",
+      "build_status": "pass",
+      "test_status": "N/A (静的HTMLのため)",
+      "security_check": "pass (APIキー・シークレット埋め込みなし、外部スクリプト読み込みなし、target=_blankにrel=noopener noreferrer付与済み)",
+      "known_issues": []
+    },
+    "acceptance_criteria_status": {
+      "1_index_has_6_sections": "PASS",
+      "2_toy_and_apparel_research_reflected": "PASS",
+      "3_category_risk_table_exists": "PASS (10行: 大人アパレル、子どもアパレル、子どもパジャマ、着物浴衣、ヴィンテージ古着、スカーフ帽子手袋、新品玩具、中古玩具、人形の服、大人向けコレクターエディション玩具)",
+      "4_four_options_listed": "PASS (中古品シフト / 箱なし中古 / コレクター向け明記 / メーカー仕入れルート)",
+      "5_references_include_cpsc_ecfr_and_research_json": "PASS (CPSC公式5件、eCFR 9件、research-report.json 2件、legacy.htmlリンク)",
+      "6_legacy_html_created_with_old_content": "PASS",
+      "7_legacy_has_top_banner": "PASS (ページ上部に警告バナー + HTMLコメントメモ)",
+      "8_portfolio_description_updated": "PASS (602-605行目の.project-descのみ変更、他のHTML構造・スタイルは無変更)",
+      "9_no_external_css_js": "PASS (CDN、フォントAPI、トラッキングスクリプトなし)",
+      "10_mobile_readable": "PASS (max-width 720px、@media (max-width: 520px)でフォント縮小、テーブルは.table-wrapで横スクロール対応)",
+      "11_fact_and_inference_distinguished": "PASS (断定口調を避け、「〜と考えられます」「可能性が高い」「現実的と考えられます」等の表現を採用)",
+      "12_html_size_under_30kb": "PASS (19,528 bytes = 19.1 KB)",
+      "13_disclaimer_present": "PASS (footerに免責事項: 「本資料はリサーチに基づく考察であり、法的助言ではない」)"
+    },
+    "technical_decisions": [
+      "フォントはシステムフォント（-apple-system, 'Hiragino Sans', 'Noto Sans JP'等）のみ使用。Google Fonts等のCDN読み込みは禁止事項のため回避。",
+      "カラーは白背景 + 濃いグレー文字 + ブランド青(#1a365d, #2b6cb0)をアクセントとし、赤系(#c53030)は警告(callout, .risk-hi)のみに限定。",
+      "カテゴリ別リスク表はmin-width 560pxの.table-wrap内に配置し、スマホでは横スクロールで閲覧できるようにした。",
+      "絵文字は警告記号(⚠)のみ使用。セクションタイトルには絵文字を使わず数字見出し(h2)のみ。",
+      "legacy.htmlは既存のCSSトークン（--brand, --danger等）を保持したまま、冒頭にHTMLコメント、ページ内に.legacy-bannerを追加。オリジナルのa要素には target=_blank/rel=noopener noreferrer を補強。",
+      "portfolio/index.htmlの編集は605行目の.project-descの1箇所のみ。link-pages/link-repo等の他のHTMLは一切変更していない。",
+      "research JSONへのリンクは相対パス./docs/harness/research-report.json、./docs/harness/research-report-apparel.jsonとした。GitHub Pagesで公開された場合、同じリポジトリ内のファイルとしてアクセス可能。",
+      "受け入れ基準10（モバイル）は実機確認ではなくCSS設計で担保。レスポンシブブレークポイント520pxとviewport metaタグで対応。"
+    ],
+    "review_context": {
+      "instructions_from_parent": "task-spec.mdに基づきcpsc-proposal/index.htmlを新構成で置換、legacy.htmlに旧版退避、portfolio descriptionを更新する。玩具・フィギュア編とアパレル編の両方のリサーチ結果を反映する。単一HTML、外部依存なし、30KB以内、モバイル対応、事実と推測の区別を守る。",
+      "relevant_files": [
+        "/Users/naokijodan/Desktop/cpsc-proposal/docs/harness/task-spec.md",
+        "/Users/naokijodan/Desktop/cpsc-proposal/docs/harness/research-report.json",
+        "/Users/naokijodan/Desktop/cpsc-proposal/docs/harness/research-report-apparel.json",
+        "/Users/naokijodan/Desktop/cpsc-proposal/index.html (新規置換)",
+        "/Users/naokijodan/Desktop/cpsc-proposal/legacy.html (新規作成)",
+        "/Users/naokijodan/Desktop/プロジェクト/portfolio/index.html (1箇所のみ編集)"
+      ],
+      "architecture_notes": "単一HTMLファイル・外部依存ゼロの構成。GitHub Pagesで即公開可能。リサーチJSONは docs/harness/ 配下のため、GitHub Pages経由では docs/harness/*.json のパスでアクセスできる前提。リンクの到達可否はリポジトリ公開状態に依存するため、子B（レビュー）セッションではリンク到達確認ではなく、HTMLの相対パス指定が正しいかの検証を依頼したい。"
+    },
+    "notes": [
+      "task-spec.mdのタイトル指定に揺れあり: セクション見出しh1は「7月以降の新品玩具・フィギュア販売をどうするか」、ブラウザタブ用<title>は「7月以降の新品玩具・アパレル販売」と指定されていた。仕様書に明記された通りそのまま採用した。",
+      "task-spec.mdのブラウザタブ用titleは「アパレル」、h1は「玩具・フィギュア」で異なるが、アパレル編もリサーチ対象である点を踏まえるとtitleがより包括的表現であり、意図的な使い分けと解釈した。",
+      "「17歳以上向けの虚偽ラベル貼付は意図的規制回避とみなされるリスク」の記述は、task-spec.md §2(legacy)および §3-1(玩具)でred_flagsとして明記されており、本文セクション3-1の末尾にcalloutとして配置した。",
+      "カテゴリ別リスク表の「中古玩具」行は、research-report.json Q5に基づき Exclusion Code 申告を記載。アパレルのDisclaimer Bとは別の扱いである点を反映。",
+      "Section 5の選択肢4番(メーカー仕入れルート)には、research-report.json Q4で言及されているComponent Part Testing(16 CFR Part 1109)について簡潔に触れた。",
+      "git commit/push は仕様書の禁止事項に従い実施していない。子C（apply）セッションで実施されることを想定。"
+    ]
+  }
+}

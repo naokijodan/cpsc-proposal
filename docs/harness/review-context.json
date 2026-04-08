@@ -1,0 +1,53 @@
+{
+  "task_id": "cpsc-proposal-renewal",
+  "project_type": "static_html_single_page",
+  "primary_files": [
+    "/Users/naokijodan/Desktop/cpsc-proposal/index.html",
+    "/Users/naokijodan/Desktop/cpsc-proposal/legacy.html"
+  ],
+  "secondary_files": [
+    "/Users/naokijodan/Desktop/プロジェクト/portfolio/index.html"
+  ],
+  "reference_files": [
+    "/Users/naokijodan/Desktop/cpsc-proposal/docs/harness/task-spec.md",
+    "/Users/naokijodan/Desktop/cpsc-proposal/docs/harness/research-report.json",
+    "/Users/naokijodan/Desktop/cpsc-proposal/docs/harness/research-report-apparel.json"
+  ],
+  "architecture_notes": "既存の cpsc-proposal は単一HTMLファイル（index.html）のみのシンプルな構成。外部依存なし。GitHub Pages でホストされている（https://naokijodan.github.io/cpsc-proposal/）。ポートフォリオ (https://naokijodan.github.io/portfolio/) からリンクされている。",
+  "review_priorities": [
+    "事実と推測の区別が適切か（研究レポートの fact/inference/unknown と整合しているか）",
+    "リサーチレポート2本（玩具編・アパレル編）の内容が正しく反映されているか",
+    "カテゴリ別リスク表の内容が正確か",
+    "外部CSS/JS依存がないか",
+    "モバイル表示が壊れていないか（CSSのviewport meta、メディアクエリ）",
+    "リンク切れがないか（CPSC公式URL、eCFR URL）",
+    "旧提案書（legacy.html）の内容が保持されているか",
+    "ポートフォリオのdescriptionだけが更新され、他が壊れていないか",
+    "断定口調を避けているか（「〜と考えられる」「〜の可能性がある」が適切に使われているか）",
+    "免責事項が記載されているか"
+  ],
+  "do_not_check": [
+    "既存のlegacy.html内部の古い情報（2026年3月29日時点の内容はそのまま残すべき）",
+    "docs/harness/配下のファイル（レビュー対象外）"
+  ],
+  "pass_criteria": {
+    "required_sections": [
+      "背景",
+      "最初に考えた案",
+      "調べてわかったこと（玩具編・アパレル編）",
+      "カテゴリ別リスク表",
+      "今後の選択肢（4つ）",
+      "参考資料・出典"
+    ],
+    "required_links": [
+      "cpsc.gov",
+      "ecfr.gov",
+      "legacy.html",
+      "docs/harness/research-report.json",
+      "docs/harness/research-report-apparel.json"
+    ],
+    "max_html_size_kb": 30,
+    "must_be_mobile_responsive": true,
+    "must_have_disclaimer": true
+  }
+}

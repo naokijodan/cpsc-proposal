@@ -1,0 +1,3 @@
+.harness-worker-*/
+docs/harness/parent-window.txt
+docs/harness/session-*.json
